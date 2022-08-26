@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: cURL request
         run:  |
-          curl -X POST 'https://spicy-mangos-sneeze-180-244-135-39.loca.lt/v1/schedule/genshin' \
+          curl -X POST 'https://api.mbaharip.me/v1/schedule/genshin' \
           --header 'x-api-key: ${{ secrets.API_KEY }}' \
           --header 'Content-Type: application/x-www-form-urlencoded' \
           --data-urlencode 'accId=${{ secrets.ACC_ID }}' \

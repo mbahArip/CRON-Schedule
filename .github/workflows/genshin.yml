@@ -2,7 +2,7 @@ name: Genshin Auto Login
 
 on:
   schedule:
-    - cron: '45 14 * * *'
+    - cron: '45 16 * * *'
   workflow_dispatch:
     
 jobs:

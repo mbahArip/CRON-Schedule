@@ -1,0 +1,13 @@
+name: VertexWarehouse Activity
+
+on:
+  schedule:
+    - cron: '0 17 * * *'
+  workflow_dispatch:
+
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cURL request
+        run:  curl 'https://www.vertex-warehouse.com/api/v2/activity'

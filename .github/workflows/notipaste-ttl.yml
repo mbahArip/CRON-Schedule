@@ -1,0 +1,16 @@
+name: Notipaste - Delete expires paste
+
+on:
+  schedule:
+    - cron: '0 17 * * *'
+  workflow_dispatch:
+
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cURL request
+        run:  |
+          curl -X POST 'https://notipaste.mbaharip.com/api/internal/ttl' \
+          --header 'Content-Type: application/x-www-form-urlencoded' \
+          --data-urlencode 'password=${{ secrets.NOTIPASTE_PASSWORD }}' \

@@ -1,0 +1,17 @@
+name: Genshin Auto Login
+
+on:
+  schedule:
+    - cron: '0 17 * * *'
+  workflow_dispatch:
+    
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cURL request
+        run:  |
+          curl -X POST 'https://api.mbaharip.com/v1/scheduler/zzz' \
+          --header 'x-api-key: ${{ secrets.API_KEY }}' \
+          --header 'Content-Type: application/x-www-form-urlencoded' \
+          --data-urlencode 'cookie=${{ secrets.ZZZ_SECRET }}'

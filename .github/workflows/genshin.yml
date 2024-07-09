@@ -14,8 +14,4 @@ jobs:
           curl -X POST 'https://api.mbaharip.com/v1/scheduler/genshin' \
           --header 'x-api-key: ${{ secrets.API_KEY }}' \
           --header 'Content-Type: application/x-www-form-urlencoded' \
-          --data-urlencode 'accId=${{ secrets.ACC_ID }}' \
-          --data-urlencode 'uuid=${{ secrets.UUID }}' \
-          --data-urlencode 'lToken=${{ secrets.LTOKEN }}' \
-          --data-urlencode 'cookie=${{ secrets.COOKIE }}' \
-          --data-urlencode 'loginTicket=${{ secrets.LOGIN_TICKET }}' 
+          --data-urlencode 'cookie=${{ secrets.GENSHIN_SECRET }}'
